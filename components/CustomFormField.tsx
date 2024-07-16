@@ -1,5 +1,6 @@
 "use client";
 import { Input } from "@/components/ui/input";
+import { E164Number } from "libphonenumber-js/core";
 import {
   FormControl,
   FormDescription,
@@ -62,7 +63,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
             placeholder={placeholder}
             international
             withCountryCallingCode
-            value={field.value as E164NUmber | undefined}
+            value={field.value as E164Number | undefined}
             onChange={field.onChange}
             className="input-phone"
           />
